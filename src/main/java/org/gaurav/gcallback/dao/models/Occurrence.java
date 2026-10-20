@@ -40,7 +40,7 @@ public class Occurrence {
     @Column(name = "updated_at")
     private Instant updatedAt;
 
-    @Column(name = "createdAt")
+    @Column(name = "created_at")
     private Instant createdAt;
 
     @PrePersist

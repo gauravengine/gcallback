@@ -28,7 +28,7 @@ public class Job {
     @Column(name = "cron_expression")
     private String cronExpression;
 
-    @Column(nullable = false)
+    @Column(name = "timezone", nullable = false)
     private String timeZone;
 
     @Column(name = "run_at")

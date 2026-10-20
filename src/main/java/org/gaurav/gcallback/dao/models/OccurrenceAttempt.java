@@ -17,8 +17,7 @@ public class OccurrenceAttempt {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Id
-    @Column(name = "started_at")
+    @Column(name = "started_at", nullable = false)
     private Instant startedAt;
 
     @Column(name = "occurrence_id", nullable = false)
@@ -31,7 +30,7 @@ public class OccurrenceAttempt {
     private Instant finishedAt;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, name = "outcome")
     private AttemptOutcome outcome;
 
     @Column(name = "status_code")
@@ -49,12 +48,7 @@ public class OccurrenceAttempt {
     @Column(name = "worker_id")
     private String workerId;
 
-    @Data
-    @NoArgsConstructor
-    public static class Key implements Serializable {
-        private Long id;
-        private Instant startedAt;
-    }
+
 
 
 }

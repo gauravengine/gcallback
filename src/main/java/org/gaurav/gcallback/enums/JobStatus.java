@@ -1,5 +1,5 @@
 package org.gaurav.gcallback.enums;
 
 public enum JobStatus {
-    ACTIVE, PAUSED, DELETED
+    ACTIVE, PAUSED, COMPLETED, DELETED
 }

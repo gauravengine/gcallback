@@ -30,6 +30,6 @@ public class SchedulerConfig {
 
     @Bean
     public Clock getClock() {
-        return Clock.systemDefaultZone();
+        return Clock.systemUTC();
     }
 }
